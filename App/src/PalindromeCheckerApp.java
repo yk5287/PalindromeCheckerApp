@@ -3,14 +3,20 @@ public class PalindromeCheckerApp {
         System.out.println("Welcome to the Palindrome Checker Management System");
         String input = "madam";
 
-        boolean isPalindrome = true;
-        for (int i = 0; i < input.length() / 2; i++) {
-            if (input.charAt(i) != input.charAt(input.length() - i - 1)) {
-                isPalindrome = false;
-                break;
-            }
+        // Variable to store reversed string
+        String reversed = "";
+
+        // Iterate from last character to first
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
         }
+
+        // Compare original and reversed string
+        boolean isPalindrome = input.equals(reversed);
+
+        // Print result
         System.out.println("Input text: " + input);
+        System.out.println("Reversed text: " + reversed);
         System.out.println("Is it a Palindrome?: " + isPalindrome);
     }
 }
