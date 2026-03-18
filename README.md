@@ -1,1 +1,1 @@
-# PalindromeCheckerApp
+# UseCase7PalindromeCheckerApp
